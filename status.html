@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Package Status</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>FastShip</h1>
+</header>
+
+<main>
+  <h2>Package Suspended</h2>
+  <p>Your package has been stopped at a local distribution hub.</p>
+  <p>A customs charge must be paid before delivery can continue.</p>
+
+  <p id="code"></p>
+
+  <a class="button" href="schedule.html">Schedule Delivery Now</a>
+</main>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("code").innerText =
+  "Tracking Number: " + params.get("code");
+</script>
+
+</body>
+</html>
