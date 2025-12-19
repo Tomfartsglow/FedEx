@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Package Status</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <div class="nav">
-    <div class="brand">
-      <img src="logo.png" alt="FastShip Logo">
-      <h1>FastShip</h1>
-    </div>
-    <div class="links">
+  <div class="container">
+    <div>FastTrack Shipping</div>
+    <nav>
       <a href="index.html">Home</a>
       <a href="tracking.html">Tracking</a>
-    </div>
+    </nav>
   </div>
 </header>
 
-<main class="center card">
-  <h2>Package On Hold</h2>
-  <p>Your package is being held at a local facility.</p>
-  <p>A customs charge must be paid to continue delivery.</p>
+<main>
+  <h1>Package Status</h1>
 
-  <p class="code" id="code"></p>
-  <button>Schedule Delivery</button>
+  <p id="tracking"></p>
+
+  <p>Your package is currently on hold at a local distribution hub.</p>
+  <p>A customs or delivery fee is required before release.</p>
+
+  <a href="schedule.html" class="btn">Schedule Delivery</a>
 </main>
 
+<footer>
+  © FastTrack Shipping
+</footer>
+
 <script>
-const params = new URLSearchParams(window.location.search);
-document.getElementById("code").innerText =
-  "Tracking Number: " + params.get("code");
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("tracking").innerText =
+    "Tracking Number: " + (params.get("track") || "N/A");
 </script>
 
 </body>
