@@ -2,31 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Track Order</title>
+  <title>Track Package</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>FastShip</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="tracking.html">Tracking</a>
-  </nav>
+  <div class="nav">
+    <div class="brand">
+      <img src="logo.png" alt="FastShip Logo">
+      <h1>FastShip</h1>
+    </div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="tracking.html">Tracking</a>
+    </div>
+  </div>
 </header>
 
-<main>
-  <section>
+<main class="center card">
   <h2>Track Your Order</h2>
   <p>Enter your tracking number below.</p>
 
   <input type="text" id="tracking" placeholder="Tracking number">
-  <button onclick="go()">Search</button>
-</section>
+  <button onclick="track()">Search</button>
 </main>
 
 <script>
-function go() {
+function track() {
   const code = document.getElementById("tracking").value;
   if (code.trim() !== "") {
     window.location.href = "status.html?code=" + code;
@@ -36,4 +39,3 @@ function go() {
 
 </body>
 </html>
-
