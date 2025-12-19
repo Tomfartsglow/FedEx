@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Ship Package</title>
+  <title>Ship a Package</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>FastShip</h1>
+  <div class="container">
+    <div>FastTrack Shipping</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tracking.html">Tracking</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-  <h2>Shipping Form</h2>
+  <h1>Ship a Package</h1>
 
-  <form onsubmit="done(event)">
-    <input placeholder="Your Name" required>
-    <input placeholder="Your Address" required>
-    <input placeholder="Recipient Name" required>
-    <input placeholder="Recipient Address" required>
-    <input placeholder="Phone Number" required>
+  <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+    <input type="text" placeholder="Sender Name" required>
+    <input type="text" placeholder="Sender Address" required>
+    <input type="text" placeholder="Recipient Name" required>
+    <input type="text" placeholder="Recipient Address" required>
     <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Phone Number" required>
     <input type="date" required>
-
     <button type="submit">Submit</button>
   </form>
 </main>
 
-<script>
-function done(e) {
-  e.preventDefault();
-  alert("Submitted");
-  window.location.href = "index.html";
-}
-</script>
+<footer>
+  © FastTrack Shipping
+</footer>
 
 </body>
 </html>
