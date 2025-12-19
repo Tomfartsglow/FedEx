@@ -1,41 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Track Package</title>
+  <title>Track Your Order</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <div class="nav">
-    <div class="brand">
-      <img src="logo.png" alt="FastShip Logo">
-      <h1>FastShip</h1>
-    </div>
-    <div class="links">
+  <div class="container">
+    <div>FastTrack Shipping</div>
+    <nav>
       <a href="index.html">Home</a>
       <a href="tracking.html">Tracking</a>
-    </div>
+    </nav>
   </div>
 </header>
 
-<main class="center card">
-  <h2>Track Your Order</h2>
-  <p>Enter your tracking number below.</p>
+<main>
+  <h1>Track Your Order</h1>
 
-  <input type="text" id="tracking" placeholder="Tracking number">
-  <button onclick="track()">Search</button>
+  <form onsubmit="event.preventDefault(); 
+    const t=document.getElementById('t').value;
+    window.location.href='status.html?track='+encodeURIComponent(t);">
+    <input id="t" type="text" placeholder="Enter Tracking Number" required>
+    <button type="submit">Search</button>
+  </form>
 </main>
 
-<script>
-function track() {
-  const code = document.getElementById("tracking").value;
-  if (code.trim() !== "") {
-    window.location.href = "status.html?code=" + code;
-  }
-}
-</script>
+<footer>
+  © FastTrack Shipping
+</footer>
 
 </body>
 </html>
