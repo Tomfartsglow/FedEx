@@ -1,120 +1,38 @@
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schedule Delivery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f3f3f3;
-  color: #222;
-  text-align: center;
-}
+<header>
+  <div class="container">
+    <div>FastTrack Shipping</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tracking.html">Tracking</a>
+    </nav>
+  </div>
+</header>
 
-header {
-  background-color: #4d148c;
-  padding: 20px 40px;
-}
+<main>
+  <h1>Schedule Delivery</h1>
 
-header img {
-  height: 45px;
-  vertical-align: middle;
-}
+  <form onsubmit="event.preventDefault(); window.location.href='final.html';">
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Address" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="date" required>
+    <input type="text" placeholder="Tracking Number" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
 
-nav {
-  margin-top: 15px;
-}
+<footer>
+  © FastTrack Shipping
+</footer>
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.hero {
-  background: white;
-  padding: 60px 20px;
-}
-
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.hero img {
-  max-width: 600px;
-  width: 90%;
-  margin-top: 30px;
-}
-
-.button {
-  background-color: #ff6600;
-  color: white;
-  padding: 14px 26px;
-  font-size: 15px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.button:hover {
-  opacity: 0.9;
-}
-
-section {
-  padding: 60px 20px;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: white;
-  width: 260px;
-  padding: 25px;
-  border-radius: 6px;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-
-input {
-  width: 100%;
-  max-width: 350px;
-  padding: 12px;
-  margin: 10px auto;
-  font-size: 14px;
-  display: block;
-}
-
-button {
-  background-color: #ff6600;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 14px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.9;
-}
+</body>
+</html>
